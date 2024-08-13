@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo border"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="add-first">Delivering to malapuram 676517</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h6><p class="add-second">Update location</p></h6>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="nav-lang border">
+                <strong><h4><p>EN</p></h4></strong>
+            </div>
+            <div class="nav-singin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="crt" >Cart</p>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                <p>All</p>
+            </div>
+            <div class="panel-opts ">
+                <p class="border">Fresh</p>
+                <p class="border">Amazon miniTV</p>
+                <p class="border">Sell</p>
+                <p class="border">Best Sellers</p>
+                <p class="border">Today's Deals</p>
+                <p class="border">Mobiles</p>
+                <p class="border">Prime</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Electronics</p>
+                <p class="border">Fashion</p>
+                <p class="border">New Releases</p>
+            </div>
+            <div class="panel-deals border">
+
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="shop-section">
+            <div class="box1 box">
+                <h2 class="box-heading">Minimum 50% off | Home, kitchen & more</h2>
+                <div class="box-content1" >
+                    <img class="box-img" src="box1.jpg">
+                    <img class="box-img" src="box1r.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Kitchen essentails</p>
+                    </div>
+                    <div class="box-para2">
+                        <p>Home decor</p>
+                    </div>
+                </div>
+                <div class="box-content2">
+                    <img class="box-img" src="box2.jpg">
+                    <img class="box-img" src="box2r.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Furniture</p>
+                    </div>
+                    <div class="box-para3">
+                        <p>Home Improvements</p>
+                    </div>
+                </div>
+            
+                <span class="box-end">See all deals</span>
+            </div>
+            <div class="box2 box">
+                <h2 class="box-heading">Deals on smartphones that suits your budget</h2>
+                <div class="box-content1" >
+                    <img class="box-img" src="box2_1.jpg">
+                    <img class="box-img" src="box2_2.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Budget | Under ₹10,000</p>
+                    </div>
+                    <div class="box-para2">
+                        <p class="box2-para1">Mid range | ₹10,000-<br>25000</p>
+                    </div>
+                </div>
+                <div class="box-content2">
+                    <img class="box-img" src="box2_3.jpg">
+                    <img class="box-img" src="box2_4.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Premium | ₹25,000-<br>₹40,000</p>
+                    </div>
+                    <div class="box-para3">
+                        <p class="box2-para2">Ultra premium | Above<br>₹40,000</p>
+                    </div>
+                </div>           
+                <span class="box2-end">See all deals</span>
+            </div>
+            <div class="box3 box">
+                <div>
+                <h2 class="box3-heading">Great Freedom Sale | Shop now</h2>
+                <img class="box3-img" src="festval.jpg"><br>
+                <span class="box3-end">See all deals</span>
+            </div>
+            </div>
+            <div class="box4 box">
+                <h2 class="box-heading">Up to 65% off | Televisions</h2>
+                <div class="box-content1" >
+                    <img class="box-img" src="box4-1.jpg">
+                    <img class="box-img" src="box4-2.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Budget | below ₹11,000</p>
+                    </div>
+                    <div class="box-para2">
+                        <p class="box2-para1">Mid range | ₹12,000-<br>₹27000</p>
+                    </div>
+                </div>
+                <div class="box-content2">
+                    <img class="box-img" src="box4-3.jpg">
+                    <img class="box-img" src="box4-4.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Proplus | 26,000-<br>₹41,000</p>
+                    </div>
+                    <div class="box-para3">
+                        <p class="box2-para2">Ultra proplus | Above<br>₹50,000</p>
+                    </div>
+                </div>           
+                <span class="box4-end">See all deals</span>
+            </div>
+        </div>
+        <br>
+        <div class="shop-section2">
+            <div class="box1 box-1">
+                <div>
+                    <h2 class="box3-heading">Up to 80% off | Electronics & accessories</h2>
+                    <img class="box3-img" src="box2_1peace.jpg"><br>
+                    <span class="box3-end">See all deals</span>
+                </div>
+            </div>
+            <div class="box2 box-1">
+                <h2 class="box-heading">Great Freedom Festival | Brands in focus</h2>
+                <div class="box-content1" >
+                    <img class="box1-img" src="2row2-1.jpg">
+                    <img class="box1-img" src="2row2-2.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Starting ₹6799 | POCO<br>Smartphones</p>
+                    </div>
+                    <div class="box-para2">
+                        <p class="box2-para1">Up to 55% off | samsung<br>Appliances</p>
+                    </div>
+                </div>
+                <div class="box-content2">
+                    <img class="box1-img" src="2row2-3.jpg">
+                    <img class="box1-img" src="2row2-4.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Up to 60% off | TCL Smart TVs</p>
+                    </div>
+                    <div class="box-para3">
+                        <p class="box2-2">Starting ₹6890 | LG Appliances</p>
+                    </div>
+                </div>           
+                <span class="box2-end">See all deals</span>
+            </div>
+            <div class="box3 box-1">
+                <h2 class="box-heading">Up to 75% off | Refurbished products</h2>
+                <div class="box-content1" >
+                    <img class="box1-img" src="2row1.jpg">
+                    <img class="box1-img" src="2row2.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Laptop</p>
+                    </div>
+                    <div class="box-para2">
+                        <p class="row2-3">Mobiles</p>
+                    </div>
+                </div>
+                <div class="box1-content2">
+                    <img class="box1-img" src="2row3.jpg">
+                    <img class="box1-img" src="2row2.jpg">
+                </div>
+                <div class="box-para">
+                    <div class="box-para1">
+                        <p>Headphones</p>
+                    </div>
+                    <div class="box-para3">
+                        <p class="row2-4">Home & Kitchen<br>appliances</p>
+                    </div>
+                </div>           
+                <span class="box2-end">See all deals</span>
+            </div>
+            <div class="box4 box-1">
+                <div>
+                    <h2 class="box3-heading">Tablets best deals | order now</h2>
+                    <img class="box3-img" src="smart.touch 1.jpg"><br>
+                    <span class="box2-end">See all deals</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="Parent-div">
+            <div class="parent-div-heading">
+                <span class="span-class1">Blockbuster deals</span>
+                <span class="span-class2">See all deals</span>
+            </div>
+            <div class="img-div">
+                <div class="section3-1">
+                <div class="img-child-div">
+                    <img class="img-last" src="last1.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">83% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">299</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>699.00</del></P>
+                    </div>
+                    <span class="end-span1">Bamboo Socks for Men | Ankle Length.</span>
+                </div>
+                </div>
+                <div class="section3-2">
+                <div class="img-child-div">
+                    <img class="img-last" src="last2.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">53% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">399</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>799.00</del></P>
+                    </div>
+                    <span class="end-span1">Clean your foot and keep well.</span>
+                </div>
+                </div>
+                <div class="section3-3">
+                <div class="img-child-div">
+                    <img class="img-last" src="last3.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">48% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">999</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>1499.00</del></P>
+                    </div>
+                    <span class="end-span1">Good quality | Luxurious feel bed.</span>
+                </div>
+                </div>
+                <div class="section3-4">
+                <div class="img-child-div">
+                    <img class="img-last" src="last4.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">80% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">99</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>139.00</del></P>
+                    </div>
+                    <span class="end-span1">For your perfect smell clothes.</span>
+                </div>
+                </div>
+                <div class="section3-5">
+                <div class="img-child-div">
+                    <img class="img-last" src="last5.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">45% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">899</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>1199.00</del></P>
+                    </div>
+                    <span class="end-span1">sponge,Air bed | Use anywhere.</span>
+                </div>
+                </div>
+                <div class="section3-6">
+                    <div class="img-child-div2">
+                        <img class="img-last2" src="last6.jpg">
+                        <div class="offer-head">
+                            <div class="offers-div">
+                                <span class="off-span">39% off</span>
+                            </div>
+                            <span class="off-span2">Great Freedom Sale</span>
+                        </div>
+                        <div class="MRP-main">
+                            <P class="MRP-p1">₹</P>
+                            <P class="MRP-p2">2599</P>
+                            <P class="MRP-p1">00</P>
+                            <P class="MRP-p3">M.R.P:&nbsp;</P>
+                            <P class="MRP-p3"><del>2999.00</del></P>
+                        </div>
+                        <span class="end-span1">Prethi mixy full set.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="Parent-div2">
+            <div class="parent-div-heading">
+                <span class="span-class1">Inspired by your browsing history</span>
+            </div>
+            <div class="img-div">
+                <div class="section3-1">
+                <div class="img-child-div">
+                    <img class="img-last" src="section1.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">23% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">29999</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>35999.00</del></P>
+                    </div>
+                    <span class="end-span1">Acer Aspire lite laptop.</span>
+                </div>
+                </div>
+                <div class="section3-2">
+                <div class="img-child-div">
+                    <img class="img-last" src="section2.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">33% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">30999</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>34799.00</del></P>
+                    </div>
+                    <span class="end-span1">Nova tablet | Under ₹40000.</span>
+                </div>
+                </div>
+                <div class="section3-3">
+                <div class="img-child-div">
+                    <img class="img-last" src="section3.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">48% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">53999</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>60999.00</del></P>
+                    </div>
+                    <span class="end-span1">Asus Vivobook | Intel core.</span>
+                </div>
+                </div>
+                <div class="section3-4">
+                <div class="img-child-div">
+                    <img class="img-last" src="section4.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">80% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">99</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>139.00</del></P>
+                    </div>
+                    <span class="end-span1">For your perfect smell clothes.</span>
+                </div>
+                </div>
+                <div class="section3-5">
+                <div class="img-child-div">
+                    <img class="img-last" src="section5.jpg">
+                    <div class="offer-head">
+                        <div class="offers-div">
+                            <span class="off-span">45% off</span>
+                        </div>
+                        <span class="off-span2">Great Freedom Sale</span>
+                    </div>
+                    <div class="MRP-main">
+                        <P class="MRP-p1">₹</P>
+                        <P class="MRP-p2">899</P>
+                        <P class="MRP-p1">00</P>
+                        <P class="MRP-p3">M.R.P:&nbsp;</P>
+                        <P class="MRP-p3"><del>1199.00</del></P>
+                    </div>
+                    <span class="end-span1">sponge,Air bed | Use anywhere.</span>
+                </div>
+                </div>
+                <div class="section3-6">
+                    <div class="img-child-div2">
+                        <img class="img-last2" src="section6.jpg">
+                        <div class="offer-head">
+                            <div class="offers-div">
+                                <span class="off-span">39% off</span>
+                            </div>
+                            <span class="off-span2">Great Freedom Sale</span>
+                        </div>
+                        <div class="MRP-main">
+                            <P class="MRP-p1">₹</P>
+                            <P class="MRP-p2">2599</P>
+                            <P class="MRP-p1">00</P>
+                            <P class="MRP-p3">M.R.P:&nbsp;</P>
+                            <P class="MRP-p3"><del>2999.00</del></P>
+                        </div>
+                        <span class="end-span1">Prethi mixy full set.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-final">
+            <hr><br>
+            <span class="ending1">See personalized recommendations</span>
+            <br>
+            <div class="final-child1">
+                <strong><span class="sign-in">Sign in</span></strong>
+            </div>
+            <div class="ending-2-3">
+                <span class="ending2">New customer?</span>
+                <span class="ending3">Start here.</span>
+            </div>
+        </div>
+        <div class="end-main1">
+            <hr>
+            <div class="end-div1">
+                <span class="end-divA">Back to top</span>
+            </div>
+            <footer class="footer1">
+                <div class="UL-1">
+                    <ul>
+                        <strong><li class="li-heading">Get to Know<br>Us</li></strong>
+                        <li class="li-content">About Us</li>
+                        <li class="li-content">Careers</li>
+                        <li class="li-content">Press Releases</li>
+                        <li class="li-content">Amazon Science</li>
+                    </ul>
+                 </div>
+                 <br>
+                <div class="UL-2">
+                    <ul>
+                        <strong><li class="li-heading">Connect with<br>us</li></strong>
+                        <li class="li-content">Facebook</li>
+                        <li class="li-content">Twitter</li>
+                        <li class="li-content">Instagram</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="UL-3">
+                    <ul>
+                        <strong><li class="li-heading">Make Money with Us</li></strong>
+                        <li class="li-content">Sell on Amazon</li>
+                        <li class="li-content">Sell under Amazon<br>Accelerator</li>
+                        <li class="li-content">Protect and Build Your Brand</li>
+                        <li class="li-content">Amazon Global Selling</li>
+                        <li class="li-content">Supply to Amazon</li>
+                        <li class="li-content">Become an Affiliate</li>
+                        <li class="li-content">Fulfilment by Amazon</li>
+                        <li class="li-content">Advertise Your Products</li>
+                        <li class="li-content">Amazon Pay on Merchants</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="UL-4">
+                    <ul>
+                        <strong><li class="li-heading">Let Us Help You</li></strong>
+                        <li class="li-content">COVID-19 and Amazon</li>
+                        <li class="li-content">Your Account</li>
+                        <li class="li-content">Returns Centre</li>
+                        <li class="li-content">Recalls and Product Safety <br> Alerts</li>
+                        <li class="li-content">100% Purchase Protection</li>
+                        <li class="li-content">Amazon App Download</li>
+                        <li class="li-content">Help</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <div class="end-main2">
+            <hr>
+            <div class="footer2">
+                <img class="img-log" src="amazon logo.png">
+                <div class="lang1">
+                    <select class="select2">
+                        <option>English</option>
+                    </select>
+                    <div class="India">
+                        <img class="flag1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAACUCAMAAAAgTdyMAAAAolBMVEX/Zx8Eajj/////VAAAWA//1MrK1cwAAIkAAIwGA40AAIbZ2enc3OsAAH/8/P7v7/b29vrn5/G6utiOjsDNzeK/v9rU1Obh4e1lZaufn8JycrGurtHHx99SUqF+frCGhrx5ea+ZmceMjLg2NpSyssxCQpygoMlISJ1dXaiSkrogIIpqaqZQT6MyMpQTEo0uLpUwMIYgH5IqKoY4OIohIYRUVJphGrhOAAADzklEQVR4nO2ai47bKBRAs7S7EPwAg1+xndiOEzuxJ5lJs/P/v7aQkapK3arVam8q0D2SHdmKBEcXuBhYrRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQZD/lU8+s/rTZ1bEZ55nF4ukKMKiSET8tDKfZRdmY3Vc84ivh3LMgieV+hy7ZjdRTikzN0bN7bjLnlLuM+yKcuaUm7ix7elk48cZv73nTygZ3k52ETWUo9yfSUg2XVxXJoA0qiR42eB2wWQidVpKEdjBpLavUlmVpWmgA3j4oO3SgbOLDmVIRGMee3OFASlE0g+MDgq4dGC7fDZNcIkfY0hrrspc2j4o0kWc3oD1YO2KiPGyV0SO5qEzTfPF/JbmUgVpdMVZlIKWD2qXXIzcI7eN5q5Mp7uY7GBMk0f8wurKXgvICkDayY6y1zyxzVJ0kiQLIW+E7AISd4l5lxXhkdFKANYA0q6hLJpTktuBsj4QuRXkLZYvgijbUOuUBINpuZBdD9BOHGmkbBrI+thk9CIuFXmTzSlObGsdrZVsInYDDB6gnYroJG0TJPVZmixONmf5Jdm0xGT1eLThI0KeaNTDVQHQbmZRIxtlQ7PZSXFp0m34li9Z/lrE570JqswakXNG4aoAZ2eyQVSRONQ2SvtFbKb8lt7VLXjfy53NDnVrpi/a/KsBqwOcXWvmljYbxPXQmFFyK+Z219ybpZ/FUkqSTqPtk0nJaAlWBzi7iQ7pxzw5WY5B0h3zRatjdl6ysizC7ftHopPBi+mdUHUAswsHuoR5mjV2XKmHJdvvRq1OjR7Pnerm2gROpFkaFB1/BZtNg9llMy0FKVLVdrqRyfm+P7R6ezm1+tBPuojTvmtVGhJZ0WsNVQkwu5Gx6EAeyyn98Pekg3E7Xs2X+bUv+6Cfvgy6eCywqIhRDVUJMDtN1+3X/iT0dG/N4L9er1mU6/ukk69/HK98D1UJODt+q0WQZupwqDebTX0YK7628GqsP94clOl3STaj3X/jt7fMuHexZY5rn0cVvzPCr2dz6mA2/24mNvk0E/N8Fu33F9CvfL2m9uuVw1UBeOVBPBZNfrzyEDu78iCOlPu7akQa7vGKn+ertd+utIferbR7vkvy0x2u2ekdrp/sTl6gzwaA7yyHPu8se34qgPz7iY755MeJDovPp3EsPp+ksvh8Cu73sPrLZ1affWb1h8+gnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbugnbv4bfcPRSX2cqtZEHIAAAAASUVORK5CYII=">
+                        <span class="select2">India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
